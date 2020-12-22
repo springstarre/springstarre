@@ -108,7 +108,7 @@ input, select, textarea {
 	}
 
 	html, body {
-		background-color: #101010;
+		background-color: #F8F8F8;
 		overflow: hidden;
 	}
 
@@ -185,6 +185,7 @@ input, select, textarea {
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
 			text-decoration: none;
+			border-bottom: dotted 0px;
 		}
 
 	h2 {
@@ -937,6 +938,16 @@ input, select, textarea {
 			font-weight: 700;
 		}
 
+		#header h2 {
+			font-size: 2em;
+			font-weight: 700;
+		}
+
+		#header h2 {
+			font-size: 1.75em;
+			font-weight: 700;
+		}
+
 /* Footer */
 
 	#footer {
@@ -976,7 +987,7 @@ input, select, textarea {
 		#thumbnails article {
 			position: relative;
 			width: 50%;
-			background: #101010;
+			/*background: #101010;*/
 			outline: 0;
 		}
 
@@ -1123,10 +1134,14 @@ input, select, textarea {
 			}
 
 			#viewer .inner:before {
-				background-image: -moz-linear-gradient(left, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0)), -moz-linear-gradient(right, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0));
+				/*background-image: -moz-linear-gradient(left, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0)), -moz-linear-gradient(right, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0));
 				background-image: -webkit-linear-gradient(left, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0)), -webkit-linear-gradient(right, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0));
 				background-image: -ms-linear-gradient(left, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0)), -ms-linear-gradient(right, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0));
-				background-image: linear-gradient(left, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0)), linear-gradient(right, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0));
+				background-image: linear-gradient(left, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0)), linear-gradient(right, rgba(16,16,16,0.2), rgba(16,16,16,0) 10em, rgba(16,16,16,0));*/
+				background-image: -moz-linear-gradient(left, rgba(8,8,8,0.1), rgba(8,8,8,0) 7em, rgba(8,8,8,0)), -moz-linear-gradient(right, rgba(8,8,8,0.1), rgba(8,8,8,0) 7em, rgba(8,8,8,0));
+				background-image: -webkit-linear-gradient(left, rgba(8,8,8,0.1), rgba(8,8,8,0) 7em, rgba(8,8,8,0)), -webkit-linear-gradient(right, rgba(8,8,8,0.1), rgba(8,8,8,0) 7em, rgba(8,8,8,0));
+				background-image: -ms-linear-gradient(left, rgba(8,8,8,0.1), rgba(8,8,8,0) 7em, rgba(8,8,8,0)), -ms-linear-gradient(right, rgba(8,8,8,0.1), rgba(8,8,8,0) 7em, rgba(8,8,8,0));
+				background-image: linear-gradient(left, rgba(8,8,8,0.1), rgba(8,8,8,0) 7em, rgba(8,8,8,0)), linear-gradient(right, rgba(8,8,8,0.1), rgba(8,8,8,0) 7em, rgba(8,8,8,0));
 				content: '';
 				display: block;
 				position: absolute;
@@ -1193,21 +1208,41 @@ input, select, textarea {
 		}
 
 			#viewer .slide .caption {
-				background-image: -moz-linear-gradient(bottom, rgba(16,16,16,0.75), rgba(16,16,16,0.25) 80%, rgba(16,16,16,0));
+				/*background-image: -moz-linear-gradient(bottom, rgba(16,16,16,0.75), rgba(16,16,16,0.25) 80%, rgba(16,16,16,0));
 				background-image: -webkit-linear-gradient(bottom, rgba(16,16,16,0.75), rgba(16,16,16,0.25) 80%, rgba(16,16,16,0));
 				background-image: -ms-linear-gradient(bottom, rgba(16,16,16,0.75), rgba(16,16,16,0.25) 80%, rgba(16,16,16,0));
-				background-image: linear-gradient(bottom, rgba(16,16,16,0.75), rgba(16,16,16,0.25) 80%, rgba(16,16,16,0));
+				background-image: linear-gradient(bottom, rgba(16,16,16,0.75), rgba(16,16,16,0.25) 80%, rgba(16,16,16,0));*/
 				padding: 2em 2em 0.75em 2em ;
 				position: absolute;
 				bottom: 0;
 				left: 0;
 				width: 100%;
-				color: rgba(255, 255, 255, 0.5);
+				text-align: right;
+				color: #444;
+				text-shadow:
+					0 0 1px #F8F8F8,
+					0 0 1px #F8F8F8,
+					0 0 2px #F8F8F8,
+					0 0 2px #F8F8F8,
+					0 0 3px #F8F8F8,
+					0 0 3px #F8F8F8;
+
 				z-index: 1;
 			}
 
 				#viewer .slide .caption h2, #viewer .slide .caption h3, #viewer .slide .caption h4, #viewer .slide .caption h5, #viewer .slide .caption h6 {
-					color: #fff;
+					color: #555;
+				}
+
+				#viewer .slide .caption .inverse {
+					color: #F8F8F8;
+					text-shadow:
+						0 0 1px #000,
+						0 0 1px #000,
+						0 0 2px #000,
+						0 0 2px #111,
+						0 0 3px #111,
+						0 0 3px #111;
 				}
 
 			#viewer .slide .image {
@@ -1221,7 +1256,7 @@ input, select, textarea {
 				width: 100%;
 				height: 100%;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: contain;
 				opacity: 0;
 			}
 
